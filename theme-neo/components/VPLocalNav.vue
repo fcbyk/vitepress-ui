@@ -87,7 +87,10 @@ const classes = computed(() => {
   border-bottom: 1px solid var(--vp-c-gutter);
   padding-top: var(--vp-layout-top-height, 0px);
   width: 100%;
-  background-color: var(--vp-local-nav-bg-color);
+  background-color: color-mix(in srgb, var(--vp-local-nav-bg-color) 60%, transparent);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  transition: background-color 0.25s, backdrop-filter 0.25s;
 }
 
 .VPLocalNav.fixed {

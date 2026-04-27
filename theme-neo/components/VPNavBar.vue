@@ -30,7 +30,7 @@ watchPostEffect(() => {
   classes.value = {
     'has-sidebar': hasSidebar.value,
     'home': frontmatter.value.layout === 'home',
-    'top': y.value === 0,
+    'top': y.value < 10,
     'screen-open': props.isScreenOpen
   }
 })
@@ -75,7 +75,7 @@ watchPostEffect(() => {
   height: var(--vp-nav-height);
   pointer-events: none;
   white-space: nowrap;
-  transition: background-color 0.25s;
+  transition: background-color 0.25s, backdrop-filter 0.25s;
 }
 
 .VPNavBar.screen-open {
@@ -86,7 +86,15 @@ watchPostEffect(() => {
 
 @media (min-width: 960px) {
   .VPNavBar:not(.top) {
-    background-color: var(--vp-nav-bg-color);
+    background-color: color-mix(in srgb, var(--vp-c-bg) 60%, transparent);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+  
+  .VPNavBar.top {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
 
@@ -195,11 +203,17 @@ watchPostEffect(() => {
 .divider-line {
   width: 100%;
   height: 1px;
-  transition: background-color 0.5s;
+  transition: background-color 0.25s;
   background-color: transparent;
 }
 
-.VPNavBar:not(.top) .divider-line {
+/* 文档页：始终显示底部线条 */
+.VPNavBar:not(.home) .divider-line {
+  background-color: var(--vp-c-gutter);
+}
+
+/* 主页：滚动后才显示底部线条 */
+.VPNavBar.home:not(.top) .divider-line {
   background-color: var(--vp-c-gutter);
 }
 </style>

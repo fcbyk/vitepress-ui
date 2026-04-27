@@ -71,7 +71,7 @@ watch(
   bottom: 0;
   left: 0;
   z-index: var(--vp-z-index-sidebar);
-  padding: 32px 32px 96px;
+  padding: 10px 30px 96px;
   width: calc(100vw - 64px);
   max-width: 320px;
   background-color: var(--vp-sidebar-bg-color);
@@ -98,7 +98,8 @@ watch(
 
 @media (min-width: 960px) {
   .VPSidebar {
-    padding-top: var(--vp-nav-height);
+    /* padding-top: var(--vp-nav-height); */
+    top: var(--vp-nav-height);
     width: var(--vp-sidebar-width);
     max-width: 100%;
     background-color: var(--vp-sidebar-bg-color);
@@ -106,6 +107,7 @@ watch(
     visibility: visible;
     box-shadow: none;
     transform: translateX(0);
+    border-right: 1px solid var(--vp-c-gutter);
   }
 }
 
