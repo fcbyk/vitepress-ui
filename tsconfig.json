@@ -18,17 +18,17 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["components/*"]
     },
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist"
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
+    "components/**/*.ts",
+    "components/**/*.d.ts",
+    "components/**/*.tsx",
+    "components/**/*.vue"
   ],
   "exclude": [
     "node_modules",
