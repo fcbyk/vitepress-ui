@@ -103,7 +103,7 @@ const pageName = computed(() =>
 
 @media (min-width: 1440px) {
   .VPDoc:not(.has-sidebar) .content {
-    max-width: 784px;
+    max-width: 1104px;
   }
 
   .VPDoc:not(.has-sidebar) .container {
@@ -121,9 +121,9 @@ const pageName = computed(() =>
   display: none;
   order: 2;
   flex-grow: 1;
-  padding-left: 32px;
+  padding-left: 24px;
   width: 100%;
-  max-width: 256px;
+  max-width: 200px;
 }
 
 .left-aside {
@@ -135,8 +135,8 @@ const pageName = computed(() =>
 .aside-container {
   position: fixed;
   top: 0;
-  padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 48px);
-  width: 224px;
+  padding-top: var(--vp-nav-height);
+  width: 176px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -151,7 +151,7 @@ const pageName = computed(() =>
   position: fixed;
   bottom: 0;
   z-index: 10;
-  width: 224px;
+  width: 176px;
   height: 32px;
   background: linear-gradient(transparent, var(--vp-c-bg) 70%);
 }
@@ -188,6 +188,6 @@ const pageName = computed(() =>
 }
 
 .VPDoc.has-aside .content-container {
-  max-width: 688px;
+  max-width: 800px;
 }
 </style>
