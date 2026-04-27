@@ -63,10 +63,6 @@ const target = computed(() =>
   .title {
     flex-shrink: 0;
   }
-
-  .VPNavBarTitle.has-sidebar .title {
-    border-bottom-color: var(--vp-c-divider);
-  }
 }
 
 :deep(.logo) {
