@@ -6,6 +6,9 @@
 
 默认密码为 `123456`，可以直接在组件内编写 Markdown 内容：
 
+<CodePreview>
+  <template #preview>
+
 <PasswordProtected>
 
 这是受保护的 **Markdown** 内容。
@@ -19,6 +22,9 @@ console.log('Hello World')
 ```
 
 </PasswordProtected>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -36,9 +42,15 @@ console.log('Hello World')
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 自定义密码
 
 通过 `password` 属性设置自定义密码：
+
+<CodePreview>
+  <template #preview>
 
 <PasswordProtected password="my-secret">
 
@@ -49,6 +61,9 @@ console.log('Hello World')
 > 引用块也可以正常使用
 
 </PasswordProtected>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -62,9 +77,15 @@ console.log('Hello World')
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 自定义提示文本
 
 你可以通过以下属性自定义所有文本内容：
+
+<CodePreview>
+  <template #preview>
 
 <PasswordProtected 
   password="custom"
@@ -79,6 +100,9 @@ console.log('Hello World')
 这个组件使用了自定义的提示信息和按钮文字。
 
 </PasswordProtected>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -95,6 +119,9 @@ console.log('Hello World')
   </PasswordProtected>
 </template>
 ```
+
+  </template>
+</CodePreview>
 
 ## API
 

@@ -12,7 +12,8 @@ export default defineConfig({
           text: '基础组件',
           items: [
             { text: 'Collapse 折叠面板', link: '/components/collapse' },
-            { text: 'PasswordPrompt 密码验证', link: '/components/password-protected' }
+            { text: 'PasswordPrompt 密码验证', link: '/components/password-protected' },
+            { text: 'CodePreview 代码预览', link: '/components/code-preview' }
           ]
         }
       ],

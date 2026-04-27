@@ -4,9 +4,15 @@
 
 ## 基础用法
 
+<CodePreview>
+  <template #preview>
+
 <Collapse title="基础折叠面板">
 <p>这是折叠面板的内容区域。可以放置任何内容。</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -16,11 +22,20 @@
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 默认展开
+
+<CodePreview>
+  <template #preview>
 
 <Collapse title="默认展开的面板" :default-open="true">
   <p>这个面板默认是展开状态</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -30,7 +45,13 @@
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 自定义徽章
+
+<CodePreview>
+  <template #preview>
 
 <Collapse title="自定义徽章文本" badge="NEW" :margin-bottom="8">
   <p>使用自定义徽章文本</p>
@@ -46,6 +67,9 @@
   </template>
   <p>使用插槽自定义徽章内容</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -66,11 +90,20 @@
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 禁用状态
+
+<CodePreview>
+  <template #preview>
 
 <Collapse title="禁用的面板" :disabled="true">
   <p>这个面板被禁用了，无法点击</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -80,9 +113,15 @@
 </template>
 ```
 
+  </template>
+</CodePreview>
+
 ## 底部间距
 
 当多个折叠面板需要垂直排列时，可以使用 `margin-bottom` 属性设置间距：
+
+<CodePreview>
+  <template #preview>
 
 <Collapse title="第一个面板" :margin-bottom="16">
   <p>这个面板有 16px 的底部间距</p>
@@ -95,6 +134,9 @@
 <Collapse title="第三个面板">
   <p>这个面板没有底部间距</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -127,7 +169,15 @@
 </template>
 ```
 
+
+  </template>
+</CodePreview>
+
+
 ## 插槽使用
+
+<CodePreview>
+  <template #preview>
 
 <Collapse title="使用插槽的面板">
   <template #title>
@@ -146,6 +196,9 @@
   
   <p>使用各种插槽自定义面板内容</p>
 </Collapse>
+
+  </template>
+  <template #code>
 
 ```vue
 <template>
@@ -168,6 +221,9 @@
   </Collapse>
 </template>
 ```
+
+  </template>
+</CodePreview>
 
 ## 事件处理
 
