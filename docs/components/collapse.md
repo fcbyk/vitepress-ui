@@ -4,79 +4,79 @@
 
 ## 基础用法
 
-<CCollapse title="基础折叠面板">
+<Collapse title="基础折叠面板">
 <p>这是折叠面板的内容区域。可以放置任何内容。</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="基础折叠面板">
+  <Collapse title="基础折叠面板">
     <p>这是折叠面板的内容区域。可以放置任何内容。</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
 ## 默认展开
 
-<CCollapse title="默认展开的面板" :default-open="true">
+<Collapse title="默认展开的面板" :default-open="true">
   <p>这个面板默认是展开状态</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="默认展开的面板" :default-open="true">
+  <Collapse title="默认展开的面板" :default-open="true">
     <p>这个面板默认是展开状态</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
 ## 自定义徽章
 
-<CCollapse title="自定义徽章文本" badge="NEW" :margin-bottom="8">
+<Collapse title="自定义徽章文本" badge="NEW" :margin-bottom="8">
   <p>使用自定义徽章文本</p>
-</CCollapse>
+</Collapse>
 
-<CCollapse title="自定义徽章颜色" badge="HOT" badge-color="#ff6b6b" :margin-bottom="8">
+<Collapse title="自定义徽章颜色" badge="HOT" badge-color="#ff6b6b" :margin-bottom="8">
   <p>使用自定义徽章颜色</p>
-</CCollapse>
+</Collapse>
 
-<CCollapse title="自定义徽章内容">
+<Collapse title="自定义徽章内容">
   <template #badge>
     <span style="font-size: 12px;">问</span>
   </template>
   <p>使用插槽自定义徽章内容</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="自定义徽章文本" badge="NEW" :margin-bottom="8">
+  <Collapse title="自定义徽章文本" badge="NEW" :margin-bottom="8">
     <p>使用自定义徽章文本</p>
-  </CCollapse>
+  </Collapse>
   
-  <CCollapse title="自定义徽章颜色" badge="HOT" badge-color="#ff6b6b" :margin-bottom="8">
+  <Collapse title="自定义徽章颜色" badge="HOT" badge-color="#ff6b6b" :margin-bottom="8">
     <p>使用自定义徽章颜色</p>
-  </CCollapse>
+  </Collapse>
   
-  <CCollapse title="自定义徽章内容">
+  <Collapse title="自定义徽章内容">
     <template #badge>
       <span style="font-size: 12px;">🔥</span>
     </template>
     <p>使用插槽自定义徽章内容</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
 ## 禁用状态
 
-<CCollapse title="禁用的面板" :disabled="true">
+<Collapse title="禁用的面板" :disabled="true">
   <p>这个面板被禁用了，无法点击</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="禁用的面板" :disabled="true">
+  <Collapse title="禁用的面板" :disabled="true">
     <p>这个面板被禁用了，无法点击</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
@@ -84,31 +84,31 @@
 
 当多个折叠面板需要垂直排列时，可以使用 `margin-bottom` 属性设置间距：
 
-<CCollapse title="第一个面板" :margin-bottom="16">
+<Collapse title="第一个面板" :margin-bottom="16">
   <p>这个面板有 16px 的底部间距</p>
-</CCollapse>
+</Collapse>
 
-<CCollapse title="第二个面板" :margin-bottom="24">
+<Collapse title="第二个面板" :margin-bottom="24">
   <p>这个面板有 24px 的底部间距</p>
-</CCollapse>
+</Collapse>
 
-<CCollapse title="第三个面板">
+<Collapse title="第三个面板">
   <p>这个面板没有底部间距</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="第一个面板" :margin-bottom="16">
+  <Collapse title="第一个面板" :margin-bottom="16">
     <p>这个面板有 16px 的底部间距</p>
-  </CCollapse>
+  </Collapse>
   
-  <CCollapse title="第二个面板" :margin-bottom="24">
+  <Collapse title="第二个面板" :margin-bottom="24">
     <p>这个面板有 24px 的底部间距</p>
-  </CCollapse>
+  </Collapse>
   
-  <CCollapse title="第三个面板">
+  <Collapse title="第三个面板">
     <p>这个面板没有底部间距</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
@@ -117,19 +117,19 @@
 ```vue
 <template>
   <!-- 使用像素值 -->
-  <CCollapse title="面板" :margin-bottom="16" />
+  <Collapse title="面板" :margin-bottom="16" />
   
   <!-- 使用 rem 单位 -->
-  <CCollapse title="面板" margin-bottom="1rem" />
+  <Collapse title="面板" margin-bottom="1rem" />
   
   <!-- 使用 em 单位 -->
-  <CCollapse title="面板" margin-bottom="2em" />
+  <Collapse title="面板" margin-bottom="2em" />
 </template>
 ```
 
 ## 插槽使用
 
-<CCollapse title="使用插槽的面板">
+<Collapse title="使用插槽的面板">
   <template #title>
     <span style="color: #409eff;">自定义标题</span>
   </template>
@@ -145,11 +145,11 @@
   </template>
   
   <p>使用各种插槽自定义面板内容</p>
-</CCollapse>
+</Collapse>
 
 ```vue
 <template>
-  <CCollapse title="使用插槽的面板">
+  <Collapse title="使用插槽的面板">
     <template #title>
       <span style="color: #409eff;">自定义标题</span>
     </template>
@@ -165,7 +165,7 @@
     </template>
     
     <p>使用各种插槽自定义面板内容</p>
-  </CCollapse>
+  </Collapse>
 </template>
 ```
 
@@ -173,13 +173,13 @@
 
 ```vue
 <template>
-  <CCollapse 
+  <Collapse 
     title="事件处理示例" 
     @change="handleCollapseChange"
     @title-click="handleTitleClick"
   >
     <p>点击标题或切换状态时会触发相应事件</p>
-  </CCollapse>
+  </Collapse>
 </template>
 
 <script setup>
@@ -204,9 +204,9 @@ const handleTitleClick = (event) => {
       <button @click="closePanel">收起面板</button>
     </div>
     
-    <CCollapse ref="collapseRef" title="可控制的面板">
+    <Collapse ref="collapseRef" title="可控制的面板">
       <p>通过方法控制的面板</p>
-    </CCollapse>
+    </Collapse>
   </div>
 </template>
 
