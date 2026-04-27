@@ -36,8 +36,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@': resolve(__dirname, '../../components'),
-        '@fcbyk/vitepress-ui': resolve(__dirname, '../../components/index.ts')
+        '@fcbyk/vitepress-ui': resolve(__dirname, '../../index.ts')
       }
     }
   },

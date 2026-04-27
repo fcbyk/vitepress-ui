@@ -1,0 +1,60 @@
+/* webfont-marker-begin */
+/* Optional: Load Inter from Google Fonts (comment out if you don't want external fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* webfont-marker-end */
+
+/* 
+ * Chinese Punctuation Optimization
+ * Ensures proper rendering of Chinese punctuation marks
+ */
+@font-face {
+  font-family: 'Punctuation SC';
+  font-weight: 400;
+  src: local('PingFang SC Regular'), local('Noto Sans CJK SC'),
+    local('Microsoft YaHei');
+  unicode-range: U+201C, U+201D, U+2018, U+2019, U+2E3A, U+2014, U+2013, U+2026,
+    U+00B7, U+007E, U+002F;
+}
+
+@font-face {
+  font-family: 'Punctuation SC';
+  font-weight: 500;
+  src: local('PingFang SC Medium'), local('Noto Sans CJK SC'),
+    local('Microsoft YaHei');
+  unicode-range: U+201C, U+201D, U+2018, U+2019, U+2E3A, U+2014, U+2013, U+2026,
+    U+00B7, U+007E, U+002F;
+}
+
+@font-face {
+  font-family: 'Punctuation SC';
+  font-weight: 600;
+  src: local('PingFang SC Semibold'), local('Noto Sans CJK SC Bold'),
+    local('Microsoft YaHei Bold');
+  unicode-range: U+201C, U+201D, U+2018, U+2019, U+2E3A, U+2014, U+2013, U+2026,
+    U+00B7, U+007E, U+002F;
+}
+
+@font-face {
+  font-family: 'Punctuation SC';
+  font-weight: 700;
+  src: local('PingFang SC Semibold'), local('Noto Sans CJK SC Bold'),
+    local('Microsoft YaHei Bold');
+  unicode-range: U+201C, U+201D, U+2018, U+2019, U+2E3A, U+2014, U+2013, U+2026,
+    U+00B7, U+007E, U+002F;
+}
+
+/* 
+ * Note: This theme uses a combination of:
+ * - Inter font (optional, loaded from Google Fonts)
+ * - System fonts for Chinese (PingFang SC, Microsoft YaHei, Noto Sans SC)
+ * - Optimized Chinese punctuation rendering
+ * 
+ * Benefits:
+ * - Fast loading (system fonts don't need download)
+ * - Better Chinese support (native system fonts)
+ * - Proper punctuation rendering (Punctuation SC)
+ * 
+ * If you want to completely remove external fonts:
+ * 1. Comment out the @import line above
+ * 2. The theme will fall back to system fonts automatically
+ */

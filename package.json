@@ -3,20 +3,26 @@
   "version": "0.0.1-alpha.1",
   "description": "Custom themes and reusable components for VitePress.",
   "type": "module",
-  "main": "components/index.ts",
-  "module": "components/index.ts",
-  "types": "components/index.ts",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
   "exports": {
     ".": {
-      "types": "./components/index.ts",
-      "import": "./components/index.ts"
+      "types": "./index.ts",
+      "import": "./index.ts"
+    },
+    "./theme-neo": {
+      "types": "./theme-neo/index.ts",
+      "import": "./theme-neo/index.ts"
     }
   },
   "sideEffects": [
     "**/*.css"
   ],
   "files": [
-    "components"
+    "components",
+    "theme-neo",
+    "index.ts"
   ],
   "scripts": {
     "dev": "vitepress dev docs",
@@ -30,7 +36,16 @@
   "author": "fcbyk",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^3.3.0"
+    "vue": "^3.3.0",
+    "vitepress": "^1.6.0"
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.6.0",
+    "@docsearch/js": "^3.6.0",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/integrations": "^10.7.0",
+    "mark.js": "^8.11.1",
+    "minisearch": "^6.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
