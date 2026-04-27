@@ -44,13 +44,20 @@ function onClick({ target: el }: Event) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.5s;
+  transition: color 0.25s, background-color 0.25s;
+  padding-left: 12px;
+  border-radius: 6px;
 }
 
-.outline-link:hover,
+.outline-link:hover {
+  color: var(--vp-c-text-1);
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
 .outline-link.active {
   color: var(--vp-c-text-1);
-  transition: color 0.25s;
+  font-weight: 600;
+  background-color: rgba(var(--vp-c-brand-rgb), 0.1);
 }
 
 .outline-link.nested {

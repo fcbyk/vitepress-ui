@@ -71,13 +71,14 @@ useActiveAnchor(container, marker)
   left: -1px;
   z-index: 0;
   opacity: 0;
-  width: 2px;
+  width: 3px;
   border-radius: 2px;
-  height: 18px;
+  height: 20px;
   background-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 8px rgba(var(--vp-c-brand-rgb), 0.4);
   transition:
     top 0.25s cubic-bezier(0, 1, 0.5, 1),
-    background-color 0.5s,
+    background-color 0.25s,
     opacity 0.25s;
 }
 
